@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="./assets/css/templates.css" type="text/css" rel="stylesheet"/>
+    <link href="./assets/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <script src="./assets/js/jquery-3.5.1.min.js" type="text/javascript"></script>
+    <link href="./assets/css/rgt.css" type="text/css" rel="stylesheet"/>
+    <link href="./assets/css/styles.css" type="text/css" rel="stylesheet"/>
+    <title>رزرو وقت ثبت نام حضوری</title>
+</head>
+<body>
+<div id="header">
+    <a target="_blank" id="header-top" href="/dv/">
+        ثبت نام لاتاری 2022
+    </a>
+    <div id="menutop">
+        <div class="pagemargin">
+            <div class="container1">
+                <div class="row">
+                    <div class="col-md-2 col-lg-2 col-sm-6 col-xs-6 nopadd">
+                        <div id="logotop">
+                            <a href="https://www.hamimohajer.com/">
+                                <img src="/images/logotop.svg" alt="لوگو حامی مهاجر"/>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="hidden-md hidden-lg hidden-sm col-xs-6 nopadd">
+                        <div id="mobilemenubtn-container">
+                            <div id="mobilemenubtn">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 col-lg-9 col-sm-12 col-xs-12 nopadd">
+                        <div id="menu">
+                            <div id="mbmnt">
+                                <span>منو سایت</span>
+                                <div id="clbtn">
+                                    <i></i>
+                                    <i></i>
+                                </div>
+                            </div>
+                            <ul>
+                                <li><a href="https://hamimohajer.com/">خانه</a></li>
+                                <li>
+                                    <a>مشاوره مهاجرت</a>
+                                    <div class="mbp">
+                                        <i class="io"></i>
+                                        <i class="il"></i>
+                                    </div>
+                                    <ul>
+                                        <li><a href="/appointment.php">رزرو وقت مشاوره</a></li>
+                                        <li><a href="/assessment.php">فرم ارزیابی مهاجرت</a></li>
+                                    </ul>
+                                </li>
+                                <li class="megaitem-container">
+                                    <a href="#">خدمات</a>
+                                    <div class="mbp">
+                                        <i class="io"></i>
+                                        <i class="il"></i>
+                                    </div>
+                                    <ul class="megaitem">
+                                        <div class="row">
+                                            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 nopadd">
+                                                <div class="megaiteminner">
+                                                    <ul>
+                                                        <span>اقامت و مهاجرت</span>
+                                                        <li><a href="/usa">اقامت آمریکا</a></li>
+                                                        <li><a href="/europe">اقامت اروپا</a></li>
+                                                        <li><a href="/europe/turkey">اقامت ترکیه</a></li>
+                                                        <li><a href="/canada">اقامت کانادا</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 nopadd">
+                                                <div class="megaiteminner">
+                                                    <ul>
+                                                        <span>تحصیل در خارج</span>
+                                                        <li><a href="#">تحصیل در کانادا</a></li>
+                                                        <li><a href="/usa/study-in-the-states">تحصیل در آمریکا</a></li>
+                                                        <li><a href="#">تحصیل در هلند</a></li>
+                                                        <li><a href="#">تحصیل در انگلیس</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 nopadd">
+                                                <div class="megaiteminner">
+                                                    <ul>
+                                                        <span>خدمات ویزا</span>
+                                                        <li><a href="/canada/canada-visitor-visa">ویزای کانادا</a></li>
+                                                        <li><a href="/europe/schengen">ویزای شینگن</a></li>
+                                                        <li><a href="/usa/visa">ویزای آمریکا</a></li>
+                                                        <li><a href="#">ویزای انگلیس</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 nopadd">
+                                                <div class="megaiteminner">
+                                                    <ul>
+                                                        <span>ثبت شرکت در خارج</span>
+                                                        <li><a href="#">ثبت شرکت در ترکیه</a></li>
+                                                        <li><a href="#">ثبت شرکت در انگلیس</a></li>
+                                                        <li><a href="#">ثبت شرکت در آمریکا</a></li>
+                                                        <li><a href="#">ثبت شرکت در کانادا</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li><a href="/contactus.php">تماس با ما</a></li>
+                                <li><a style="    background: #256969;
+    color: white;" href="/dv/">ثبت نام لاتاری 2022</a></li>
+                                <li><a style="    background: #b7235a; color: white; display: none;" id="mbpanel"
+                                       href="/registerlottery/dashboard/">پنل کاربری</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-lg-1 hidden-sm hidden-xs nopadd">
+                        <div id="customerlink">
+                            <a href="/registerlottery/dashboard/">پنل کاربری</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="menudback"></div>
+</div> <!-- /header -->
+<script>
+    jQuery('div#menu>ul>li').mouseover(function () {
+        var selected = jQuery(this);
+        selected.find('ul').addClass('ulshowup');
+    });
+    jQuery('div#menu>ul>li').mouseout(function () {
+        jQuery('div#menu ul').removeClass('ulshowup');
+    });
+
+    jQuery('#mobilemenubtn').click(function () {
+        jQuery('div#menu').css('right', '0');
+        jQuery('div#menudback').css('display', 'block');
+        jQuery('div#menudback').css('opacity', '1');
+    });
+
+    jQuery('#menudback , #clbtn').click(function () {
+        jQuery('div#menu').css('right', '-70%');
+        jQuery('div#menudback').css('display', 'none');
+        jQuery('div#menudback').css('opacity', '0');
+    });
+
+    jQuery('div#menu>ul>li').click(function () {
+        var selected = jQuery(this);
+
+        if (!selected.find('ul').hasClass('openmenu')) {
+            jQuery('#menu ul').removeClass('openmenu');
+            jQuery('.mbp').removeClass('mbopen');
+            selected.find('ul').addClass('openmenu');
+            selected.find('.mbp').addClass('mbopen');
+        } else if (selected.find('ul').hasClass('openmenu')) {
+            selected.find('ul').removeClass('openmenu');
+            selected.find('.mbp').removeClass('mbopen');
+        }
+
+    });
+</script>
+<form action="payrsv.php" method="post">
+    <div id="booking-container">
+        <div class="bookingmargin">
+            <div class="bcontainer">
+                <div class="bslide" slidenum="1">
+                    <h3 class="bslide-title">رزرو وقت ثبت نام حضوری</h3>
+                    <div class="select-service-container">
+                        <div class="select-service">
+                            <input type="text" name="lnamefname" placeholder="نام و نام خانوادگی">
+                            <input type="text" name="mobile" placeholder="شماره موبایل فعال">
+                            <select class="form-control" name="way">
+                                <option value="0">نحوه آشنایی با حامی مهاجر</option>
+                                <option value="جستجو در گوگل">جستجو در گوگل</option>
+                                <option value="تبلیغات تلگرام">تلگرام</option>
+                                <option value="تبلیغات اینستاگرام">اینستاگرام</option>
+                                <option value="معرفی آشنایان">معرفی آشنایان</option>
+                                <option value="مشتری سابق">مشتری سابق</option>
+                            </select>
+                            <div id="mkind">
+                                <label class="checkcontainer">
+                                    <input type="radio" name="mkind" value="مجرد">
+                                    <span class="radiobtn"></span>
+                                    <span>مجرد هستم</span>
+                                </label>
+                                <label class="checkcontainer">
+                                    <input type="radio" name="mkind" value="متاهل">
+                                    <span class="radiobtn"></span>
+                                    <span>متاهل هستم</span>
+                                </label>
+                            </div>
+                            <span class="nextlevel">انتخاب تاریخ و ساعت</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bslide" slidenum="2">
+                    <div id="timeandcalendar">
+                        <h3 class="bslide-title">تاریخ و ساعت حضور را انتخاب نمایید</h3>
+                        <div class="mycalendar-container">
+                            <div class="monthitem" monthid="1">
+                                <div class="mycalendar">
+                                    <div id="clhead">
+                                    <span>
+                                        <span class="clmonth">آبان </span>
+                                        <span class="clyear">1399</span>
+                                    </span>
+                                    </div>
+                                    <div id="weekdays">
+                                        <span>ش</span>
+                                        <span>ی</span>
+                                        <span>د</span>
+                                        <span>س</span>
+                                        <span>چ</span>
+                                        <span>پ</span>
+                                        <span>ج</span>
+                                    </div>
+                                    <div id="datecels">
+                                        <span class="past">26</span>
+                                        <span class="past">27</span>
+                                        <span class="past">28</span>
+                                        <span class="past">29</span>
+                                        <span class="past">30</span>
+                                        <span class="past">1</span>
+                                        <span class="past">2</span>
+                                        <span class="past">3</span>
+                                        <span class="past">4</span>
+                                        <span class="past">5</span>
+                                        <span class="past">6</span>
+                                        <span class="past">7</span>
+                                        <span class="past">8</span>
+                                        <span class="past">9</span>
+                                        <span class="past">10</span>
+                                        <span class="past">11</span>
+                                        <span class="past">12</span>
+                                        <span class="past">13</span>
+                                        <span class="past">14</span>
+                                        <span class="today">15</span>
+                                        <span>16</span>
+                                        <span>17</span>
+                                        <span>18</span>
+                                        <span>19</span>
+                                        <span>20</span>
+                                    </div>
+                                    <span class="xgotoday">رزرو وقت برای امروز</span>
+                                </div>
+                                <div class="hours">
+                                    <h3 class="bslide-title">ساعت حضور را انتخاب نمایید</h3>
+                                    <span id="selecteddate">
+                                    <span>تاریخ</span>
+                                    <span class="sldate"></span>
+                                    <span class="slmonth"></span>
+                                    <span class="slyear"></span>
+                                </span>
+                                    <div class="dayhours" daynum="">
+
+                                        <select name="times">
+                                            <option value="0">انتخاب ساعت حضور</option>
+
+                                            <option value="09:00">09:00</option>
+
+
+                                            <option value="09:15">09:15</option>
+
+
+                                            <option value="09:30">09:30</option>
+
+
+                                            <option value="09:45">09:45</option>
+
+
+                                            <option value="10:00">10:00</option>
+
+
+                                            <option value="10:15">10:15</option>
+
+
+                                            <option value="10:30">10:30</option>
+
+
+                                            <option value="10:45">10:45</option>
+
+
+                                            <option value="11:00">11:00</option>
+
+
+                                            <option value="11:15">11:15</option>
+
+
+                                            <option value="11:30">11:30</option>
+
+
+                                            <option value="11:45">11:45</option>
+
+
+                                            <option value="12:00">12:00</option>
+
+
+                                            <option value="12:15">12:15</option>
+
+
+                                            <option value="12:30">12:30</option>
+
+
+                                            <option value="12:45">12:45</option>
+
+
+                                            <option value="13:00">13:00</option>
+
+
+                                            <option value="13:15">13:15</option>
+
+
+                                            <option value="13:30">13:30</option>
+
+
+                                            <option value="13:45">13:45</option>
+
+
+                                            <option value="14:00">14:00</option>
+
+
+                                            <option value="14:15">14:15</option>
+
+
+                                            <option value="14:30">14:30</option>
+
+
+                                            <option value="14:45">14:45</option>
+
+
+                                            <option value="15:00">15:00</option>
+
+
+                                            <option value="15:15">15:15</option>
+
+
+                                            <option value="15:30">15:30</option>
+
+
+                                            <option value="15:45">15:45</option>
+
+
+                                            <option value="16:00">16:00</option>
+
+
+                                            <option value="16:15">16:15</option>
+
+
+                                            <option value="16:30">16:30</option>
+
+
+                                            <option value="16:45">16:45</option>
+
+
+                                            <option value="17:00">17:00</option>
+
+
+                                            <option value="17:15">17:15</option>
+
+
+                                            <option value="17:30">17:30</option>
+
+
+                                            <option value="17:45">17:45</option>
+
+
+                                            <option value="18:00">18:00</option>
+
+
+                                            <option value="18:15">18:15</option>
+
+
+                                            <option value="18:30">18:30</option>
+
+
+                                            <option value="18:45">18:45</option>
+
+
+                                            <option value="19:00">19:00</option>
+
+
+                                            <option value="19:15">19:15</option>
+
+
+                                            <option value="19:30">19:30</option>
+
+
+                                            <option value="19:45">19:45</option>
+
+
+                                            <option value="20:00">20:00</option>
+
+
+                                            <option value="20:15">20:15</option>
+
+
+                                            <option value="20:30">20:30</option>
+
+                                        </select>
+
+                                    </div>
+                                    <span class="nextlevel">تایید</span>
+                                    <span class="changedate">تغییر تاریخ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bslide" slidenum="3">
+                    <h3 class="bslide-title">برسی و تایید نهایی</h3>
+                    <div id="lastcheck">
+                        <div class="fcg fnservice">
+                            <span class="ftitle">اطلاعات فردی</span>
+                            <input readonly class="ftext" name="gnflname"/>
+                            <input readonly class="ftext" name="gnmobile"/>
+                            <input readonly class="ftext" style="display: none;" name="gnway"/>
+                            <input readonly class="ftext" name="gntaahol"/>
+                        </div>
+                        <div class="fcg fndate">
+                            <span class="ftitle">تاریخ مراجعه</span>
+                            <span class="ftext">
+                            <input readonly class="lndate" name="lndate">
+                            <input readonly class="lnmy" name="lnmy">
+                            <input readonly class="lnyr" name="lnyr">
+                        </span>
+                        </div>
+                        <div class="fcg fnhour">
+                            <span class="ftitle">ساعت مراجعه</span>
+                            <input readonly class="ftext" name="arrival">
+                        </div>
+
+                        <div class="fcg tips">
+                            <ul>
+                                <li>هزینه رزرو وقت : 50 هزار تومان</li>
+                                <li>هزینه رزرو قابل عودت نیست</li>
+                                <li>مبلغ رزرو وقت در هنگام مراجعه شما به موسسه، از هزینه ثبت نام شما کسر خواهد شد</li>
+                                <li>برای حفظ سلامت شما، محل موسسه مرتبا ضدعفونی میگردد
+                                    از پذیرش افراد بدون ماسک معذوریم
+                                </li>
+                            </ul>
+                        </div>
+
+                        <span id="gofirst">ویرایش اطلاعات</span>
+                        <input type="submit" name="whatever" id="finishsubmit" value="تایید و پرداخت"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+    jQuery('.checkcontainer').click(function () {
+        jQuery('#timeandcalendar .checkcontainer input').parent().removeClass('activetinpt');
+        jQuery('#timeandcalendar .checkcontainer input:checked').parent().addClass('activetinpt');
+    });
+</script>
+<script>
+
+    jQuery(document).ready(function () {
+        var monthid = 1;
+        jQuery('.monthitem[monthid="' + monthid + '"]').addClass('activemonth');
+        jQuery('.nextmonth').click(function () {
+            var monthcount = jQuery('.monthitem').length;
+            monthid++;
+            if (monthid <= monthcount) {
+                jQuery('.monthitem').removeClass('activemonth');
+                jQuery('.monthitem[monthid="' + monthid + '"]').addClass('activemonth');
+                jQuery('.prevmonth').css('display', 'block');
+            } else {
+                alert('اتمام ماه های قابل رزرو ! لطفا با شرکت تماس بگیرید');
+                monthid--;
+            }
+        });
+        jQuery('.prevmonth').click(function () {
+            jQuery('.monthitem').removeClass('activemonth');
+            monthid--;
+            jQuery('.monthitem[monthid="' + monthid + '"]').addClass('activemonth');
+            if (monthid < 2) {
+                jQuery('.prevmonth').css('display', 'none');
+            }
+        });
+        var bslide = 1;
+        jQuery('.bslide[slidenum="' + bslide + '"]').addClass('activebslide');
+
+        jQuery('div.select-service .nextlevel').click(function () {
+            var wayval = jQuery('select[name="way"] option:selected').val();
+            if (wayval != 0 && jQuery(".select-service-container input[type=radio]:checked").length > 0 && jQuery('input[name="lnamefname"]').val().length > 0 && jQuery('input[name="mobile"]').val().length > 0) {
+                jQuery('.bslide').removeClass('activebslide');
+                var bslide = 2;
+                jQuery('.bslide[slidenum="' + bslide + '"]').addClass('activebslide');
+                var fnftext = jQuery(".select-service-container input[type=radio]:checked").val();
+                jQuery('input[name="gntaahol"]').val(fnftext);
+
+                // do stuff
+                var gnflnametext = jQuery("input[name='lnamefname']").val();
+                jQuery('input[name="gnflname"]').val(gnflnametext);
+
+                var mobiletext = jQuery("input[name='mobile']").val();
+                jQuery('input[name="gnmobile"]').val(mobiletext);
+
+                var waytext = jQuery("select[name='way'] option:selected").text();
+                jQuery('input[name="gnway"]').val(waytext);
+
+            } else {
+                alert('لطفا تمامی فیلد ها را تکمیل کنید')
+            }
+        });
+        jQuery('.hours .nextlevel').click(function () {
+            var tval = jQuery('.activetimes option:selected').val();
+            if (tval != 0) {
+                jQuery('.lndate').val(jQuery('.monthitem[monthid="' + monthid + '"] .sldate').text());
+                jQuery('.lnmy').val(jQuery('.monthitem[monthid="' + monthid + '"] .slmonth').text());
+                jQuery('.lnyr').val(jQuery('.monthitem[monthid="' + monthid + '"] .slyear').text());
+                var fnhour = jQuery(".hours option:selected").val();
+                jQuery('.fnhour .ftext').val(tval);
+                jQuery('.bslide').removeClass('activebslide');
+                var bslide = 3;
+                jQuery('.bslide[slidenum="' + bslide + '"]').addClass('activebslide');
+            } else {
+                alert('لطفا ساعت مراجعه را انتخاب نمایید')
+            }
+        });
+        jQuery('#gofirst').click(function () {
+            jQuery('.bslide').removeClass('activebslide');
+            var bslide = 1;
+            jQuery('.bslide[slidenum="' + bslide + '"]').addClass('activebslide');
+        });
+        jQuery('div#datecels span:not(.past,.holiday)').click(function () {
+            var selected = jQuery(this);
+            jQuery('.dayhours select[name="times"]').removeClass('activetimes');
+            var dayc = parseInt(selected.text());
+
+// elemani ke in moshakhasat ra darad, entekhab mikonad va attr an ra ba rooze entekhabi jaigozin mikonad
+            if (document.querySelector(".dayhours[daynum]")) {
+                document.querySelector("[daynum]").setAttribute("daynum", String(dayc));
+            }
+
+            jQuery('.activemonth .hours').find('.dayhours[daynum="' + dayc + '"] select').addClass('activetimes');
+            var dayselected = parseInt(selected.text());
+            jQuery('.monthitem[monthid="' + monthid + '"] .hours').css('visibility', 'visible');
+            jQuery('.monthitem[monthid="' + monthid + '"] .hours').css('opacity', '1');
+            jQuery('.monthitem[monthid="' + monthid + '"] .mycalendar').css('filter', 'blur(5px)');
+            jQuery('.sld').val(dayselected);
+            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours[daynum="' + dayselected + '"]').css('display', 'block');
+            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours[daynum="' + dayselected + '"]').css('visibility', 'visible');
+            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours[daynum="' + dayselected + '"]').css('opacity', '1');
+            jQuery('.monthitem[monthid="' + monthid + '"] .sldate').text(dayselected);
+            jQuery('.monthitem[monthid="' + monthid + '"] .slmonth').text(jQuery('.monthitem[monthid="' + monthid + '"] .clmonth').text());
+            jQuery('.monthitem[monthid="' + monthid + '"] .slyear').text(jQuery('.monthitem[monthid="' + monthid + '"] .clyear').text());
+        });
+        jQuery('.changedate').click(function () {
+            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours').css('display', 'none');
+            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours').css('visibility', 'hidden');
+            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours').css('opacity', '0');
+            jQuery('.monthitem[monthid="' + monthid + '"] .mycalendar').css('filter', 'blur(0px)');
+            jQuery('.monthitem[monthid="' + monthid + '"] .hours').css('visibility', 'hidden');
+            jQuery('.monthitem[monthid="' + monthid + '"] .hours').css('opacity', '0');
+            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours input[type="radio"]').prop('checked', false);
+        });
+        jQuery('.gotoday').click(function () {
+            var todayselected = parseInt(jQuery('.monthitem[monthid="' + monthid + '"] .today').text());
+            jQuery('.monthitem[monthid="' + monthid + '"] .sldate').text(todayselected);
+            jQuery('.monthitem[monthid="' + monthid + '"] .slmonth').text(jQuery('.monthitem[monthid="' + monthid + '"] .clmonth').text());
+            jQuery('.monthitem[monthid="' + monthid + '"] .slyear').text(jQuery('.monthitem[monthid="' + monthid + '"] .clyear').text());
+            jQuery('.monthitem[monthid="' + monthid + '"] .sld').val(todayselected);
+            jQuery('.monthitem[monthid="' + monthid + '"] .hours').css('visibility', 'visible');
+            jQuery('.monthitem[monthid="' + monthid + '"] .hours').css('opacity', '1');
+            jQuery('.monthitem[monthid="' + monthid + '"] .mycalendar').css('filter', 'blur(5px)');
+            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours[daynum="' + todayselected + '"]').css('display', 'block');
+            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours[daynum="' + todayselected + '"]').css('visibility', 'visible');
+            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours[daynum="' + todayselected + '"]').css('opacity', '1');
+        });
+    });
+</script>
+<a href="https://wa.me/+989361889654" target="_blank" id="whatsapp">
+    <img src="/images/whatsapp.svg" alt="">
+    <span>سوالی دارید؟</span>
+</a>
+<div id="popup">
+    <div id="socials">
+        <span>حامی مهاجر را دنبال کنید</span>
+        <div class="scfitem-container">
+            <a href="https://t.me/hamimohajer" target="_blank" class="scfitem tlit">
+                <span>تلگرام</span>
+                <img src="/images/telepop.svg"/>
+            </a>
+        </div>
+        <div class="scfitem-container">
+            <a href="https://www.instagram.com/hamimohajer/?hl=en" target="_blank" class="scfitem instit">
+                <span>اینستاگرام</span>
+                <img src="/images/instapop.svg"/>
+            </a>
+        </div>
+    </div>
+</div>
+<div id="mobilesocials">
+    <div class="row">
+        <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 nopadd">
+            <div class="mobilesl" id="mobiletelegram">
+                <a href="https://t.me/hamimohajer" target="_blank">تلگرام</a>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 nopadd">
+            <div class="mobilesl" id="mobileinstagram">
+                <a href="https://www.instagram.com/hamimohajer/?hl=en" target="_blank">اینستاگرام</a>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 nopadd">
+            <div class="mobilesl" id="mobilewhatsapp">
+                <a href="https://wa.me/+989361889654" target="_blank">سوالی دارید ؟</a>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="pagemargin">
+        <div class="container1">
+            <div class="row">
+
+                <div class="col-md-5 col-lg-5 col-sm-12 col-xs-12 nopadd">
+                    <div id="ftcontact">
+                        <div id="footerlogo">
+                            <img src="/images/footerlogo.png"/>
+                        </div>
+                        <div id="cninfo">
+                            <ul>
+                                <li>
+                                    <img src="/images/footerphone.svg"/>
+                                    <span> 021-48406  ( خط ویژه )</span>
+                                </li>
+                                <li>
+                                    <img src="/images/footeratsign.svg"/>
+                                    <span>
+                                            contact@hamimohajer.com
+                                        </span>
+                                </li>
+                                <li>
+                                    <img src="/images/footerlocation.svg"/>
+                                    <span>
+                                            تهران، مرزداران، خیابان ابراهیمی، برج الوند، طبقه 11 شمالی
+                                    </span>
+                                </li>
+                                <li>
+                                    <span style="    line-height: 47px;">
+ساعت کاری: همه روزه حتی ایام تعطیل
+                                        <br/>
+                                             09:00 الی 21:00
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 nopadd">
+                    <div id="ftlinks">
+                        <div class="container1">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 nopadd">
+                                    <div class="footerlinks">
+                                        <ul>
+                                            <span>کلاسه بندی خدمات</span>
+                                            <li><a href="https://hamimohajer.com/immigration/canada/study-permit">تحصیل
+                                                در کانادا</a></li>
+                                            <li><a href="https://hamimohajer.com/immigration/usa/study-permit">تحصیل در
+                                                آمریکا</a></li>
+                                            <li><a href="https://hamimohajer.com/immigration/usa/dv-lottery">لاتاری</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://hamimohajer.com/immigration/usa/dv-lottery/register-dv-lottery-program">ثبت
+                                                    نام لاتاری</a></li>
+                                            <li><a href="https://hamimohajer.com/immigration/turkey">اقامت ترکیه</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://hamimohajer.com/immigration/turkey/worth-of-turkish-passport">پاسپورت
+                                                    ترکیه</a></li>
+                                            <li>
+                                                <a href="https://hamimohajer.com/immigration/turkey/company-registration">ثبت
+                                                    شرکت در ترکیه</a></li>
+                                            <li>
+                                                <a href="https://hamimohajer.com/immigration/europe-residence-permit/schengen-visa">شینگن</a>
+                                            </li>
+                                            <li><a href="https://hamimohajer.com/Europe/schengen">اخذ ویزای شینگن</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 nopadd">
+                                    <div class="footerlinks">
+                                        <ul>
+                                            <span>دسترسی سریع</span>
+                                            <li><a href="/contactus.php">تماس با ما</a></li>
+                                            <li><a href="#">نقشه سایت</a></li>
+                                            <li><a href="/assessment.php">فرم ارزیابی</a></li>
+                                            <li><a href="/appointment.php">وقت مشاوره</a></li>
+                                            <li><a href="/blog">اخبار مهاجرت</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12 nopadd">
+                    <div id="crts">
+                        <img id='jzpefukzwlaorgvjesgt' style='cursor:pointer'
+                             onclick='window.open("https://logo.samandehi.ir/Verify.aspx?id=76430&p=jyoegvkaaodsxlaoobpd", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")'
+                             alt='logo-samandehi' src='/include/hami/samandehi.png'/>
+                        <a target="_blank"
+                           href="https://trustseal.enamad.ir/?id=52139&amp;Code=XwHbirE45zbBuXs5yREl"><img
+                                src="/include/hami/enamad.png" alt="" style="cursor:pointer" id="XwHbirE45zbBuXs5yREl"></a>
+                    </div>
+                </div>
+            </div>
+            <div id="copyright">
+                <div class="row">
+                    <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 nopadd">
+                        <div class="cpi cpr">
+                            <span>تمامی حقوق مادی و معنوی محفوظ است و کپی برداری با ذکر منبع بلامانع می باشد</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 nopadd">
+                        <div class="cpi cpl">
+                            <span>طراحی و توسعه : واحد انفورماتیک گروه شرکت های <a href="https://hamimohajer.com/">حامی مهاجر</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/bootstrap.js" type="text/javascript"></script>
+</footer>
+</body>
+</html>

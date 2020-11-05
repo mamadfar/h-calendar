@@ -1,0 +1,464 @@
+.imged {
+    float: right;
+    width: 100%;
+    padding: 0px 12px 10px 12px;
+    border-radius: 7px;
+    border: 2px solid #d8d8d8;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+div#edp #submitform {margin-top: 30px;}
+.fcb2 {
+    float: right;
+    width: 100%;
+    padding: 27px 0px 0px 0px;
+}
+div#edp {
+    padding: 25px 0px;
+    float: right;
+    width: 100%;
+}
+.radiocn.dsi:hover input ~ .checkmark {
+    background: white!important;
+}
+.dsi:hover{
+    cursor: not-allowed!important;
+}
+div#ltbanner {
+    float: right;
+    width: 100%;
+    height: 190px;
+    background: url('../images/lotterybanner.jpg');
+    text-align: center;
+    color: white;
+    padding-top: 54px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+div#phonescontainer {
+    float: right;
+    width: 100%;
+    background: #fff3f3;
+    padding: 20px 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #f9cdcd;
+}
+div#captcha {
+    float: right;
+    width: 100%;
+    margin-bottom: 26px;
+}
+span.dffw:after {
+    content: '(Ø­Ø±Ù Ø§Ù†Ú¯Ù„ÛŒØ³ÛŒ Ø§ÙˆÙ„ Ø´Ù…Ø§Ø±Ù‡ Ù¾Ø§Ø³Ù¾ÙˆØ±Øª ÙØ±Ø§Ù…ÙˆØ´ Ù†Ø´ÙˆØ¯)';
+    color: red;
+    margin-right: 7px;
+}
+.falert {
+    padding: 11px!important;
+}
+.formalert {
+    float: right;
+    width: 100%;
+    padding: 32px;
+    padding-bottom: 5px;
+}
+span#makesure {
+    float: right;
+    width: 100%;
+    margin-bottom: 16px;
+    background: #ff4040;
+    color: #ffffff;
+    padding: 14px;
+    border-radius: 7px;
+    border: 1px solid #ff7474;
+    line-height: 28px;
+}
+span.enonly:after {
+    content: '(Ø¨Ø§ Ø­Ø±ÙˆÙ Ø§Ù†Ú¯Ù„ÛŒØ³ÛŒ ÙˆØ§Ø±Ø¯ Ù†Ù…Ø§ÛŒÛŒØ¯)';
+    color: red;
+    margin-right: 7px;
+}
+.formalert .alert {
+    margin-bottom: 0px!important;
+}
+.alertphoto {
+    float: left;
+    width: 100%;
+    background: #e41212;
+    padding: 14px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 400;
+    line-height: 27px;
+    margin-top: 15px;
+}
+.imgprv {
+    float: left;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+label.newfile {
+    float: right;
+    background: #eeeeee;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    min-width: 100%;
+    padding: 14px 4px;
+    border: 2px dashed #bdbdbd;
+}
+.dsbox {
+    display: none;
+}
+#submitform {
+    float: right;
+    width: 100%;
+    padding: 33px 0px;
+    border-radius: 8px;
+    border: none!important;
+    background: #82a410;
+    color: white;
+    font-size: 14pt;
+    font-weight: 400;
+    margin-bottom: 145px;
+}
+.dvform-margin {width: 65%;margin: 0 auto;}
+
+div#dvform-container {
+    float: right;
+    width: 100%;
+}
+.mi-container span {
+    float: right;
+    width: 100%;
+    margin-bottom: 9px;
+    font-size: 11pt;
+}
+label.radiocn {
+    float: right;
+    width: 100%;
+    margin-bottom: 0px;
+    border: 1px solid #d2d2d2;
+    padding-top: 9px;
+    border-radius: 5px;
+    background: white;
+}
+.mi-container select {
+    float: right;
+    width: 100%;
+    padding: 7px 14px;
+    border: 1px solid #d2d2d2;
+    border-radius: 5px;
+    outline: none!important;
+}
+label.radiocn span {
+    float: right;
+    width: 100%;
+    padding-right: 38px;
+    padding-top: 2px;
+    font-weight: 400;
+    color: #757575;
+    font-size: 10pt;
+}
+div#dvform-container h2 {
+    float: right;
+    width: 100%;
+    font-size: 14pt;
+    margin-bottom: 17px;
+    color: #e6163f;
+}
+.fc-container {
+    float: right;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    border: 1px solid #d2d2d2;
+}
+body {
+    background: white;
+}
+.fct {
+    float: right;
+    width: 100%;
+}
+.fct h3 {
+    float: right;
+    width: 100%;
+    font-size: 11pt;
+    margin-top: 0px!important;
+    padding: 13px 20px;
+    background: #f5f5f5;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #d2d2d2;
+}
+.fcb {
+    float: right;
+    width: 100%;
+    padding: 20px;
+}
+.mi-container {
+    float: right;
+    width: 100%;
+    padding: 5px;
+}
+.expitem {
+    float: right;
+    width: 100%;
+    padding-left: 8px;
+}
+div#dbdesc {
+    float: right;
+    width: 100%;
+    background: #a70c3e;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 11px;
+}
+
+div#dbdesc p {
+    float: right;
+    width: 100%;
+    margin-bottom: 0px;
+    color: white;
+    font-weight: 200;
+    line-height: 31px;
+    font-size: 11pt;
+}
+.mi-container input[type="text"] , .mi-container input[type="email"] {
+    float: right;
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #d2d2d2;
+    border-radius: 5px;
+    outline: none!important;
+}
+label.radiocn h6 {
+    float: right;
+    width: 100%;
+    margin: 0px;
+    padding-right: 40px;
+    font-size: 11pt;
+}
+/* The container */
+.radiocn {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radiocn input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 20px;
+    width: 20px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 1px solid #a0a0a0;
+}
+
+/* On mouse-over, add a grey background color */
+.radiocn:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radiocn input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radiocn input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radiocn .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: white;
+}
+span.enlikepass:after {
+    content: '(Ø§Ù†Ú¯Ù„ÛŒØ³ÛŒ Ù…Ø·Ø§Ø¨Ù‚ Ù¾Ø§Ø³Ù¾ÙˆØ±Øª)';
+    color: red;
+    margin-right: 7px;
+}
+
+
+
+
+
+label.tpfile {
+    float: right;
+    background: #eeeeee;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    min-width: 100%;
+    padding: 25px 4px;
+    border: 2px dashed #bdbdbd;
+}
+
+input.lotterypic {
+    opacity: 0;
+    position: absolute;
+    height: 0;
+}
+
+.uploadpic {
+    float: right;
+    width: 100%;
+}
+
+.upicicon {
+    text-align: center;
+    float: right;
+    width: 100%;
+    opacity: 0.6;
+}
+
+.upicicon img {
+    width: 50px;
+}
+
+label.tpfile span {
+    float: right;
+    width: 100%;
+    text-align: center;
+    margin-top: 16px;
+    background: #f20000;
+    padding: 8px 0px;
+    color: white;
+    border-radius: 8px;
+}
+.selectpic {
+    float: right;
+    width: 100%;
+}
+
+.selectpic-inner {
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+.picelzamat {
+    float: right;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.picelzamat ul {
+    float: right;
+    width: 100%;
+}
+
+.picelzamat ul li {
+    float: right;
+    width: 100%;
+    padding: 7px 0px;
+    font-weight: 300;
+    font-size: 11pt;
+}
+
+.picelzamat span {
+    float: right;
+    background: red;
+    padding: 10px 40px;
+    margin-bottom: 14px;
+    color: white;
+    border-radius: 8px;
+}
+
+.picelzamat a {
+    float: right;
+    text-decoration: none!important;
+    font-weight: 600;
+}
+.imagepreview {
+    float: right;
+    width: 100%;
+    margin-bottom: 22px;
+}
+
+.imagepreview img {
+    float: right;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+img.imgp {
+    float: right;
+    width: 100%;
+}
+
+
+div#editingform {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #ff0000d1;
+    padding: 9px 0px;
+    color: white;
+    font-size: 12pt;
+    line-height: 33px;
+    font-weight: 300;
+    text-align: center;
+}
+
+div#edtext {
+    float: right;
+    width: 100%;
+}
+
+div#ednew {
+    float: right;
+    width: 100%;
+    text-align: center;
+}
+
+div#ednew a {
+    background: #7b0505;
+    padding: 10px 50px;
+    display: inline-block;
+    border-radius: 5px;
+    text-decoration: none!important;
+    margin-top: 7px;
+    color: white;
+    transition: 300ms;
+}
+
+div#ednew a:hover {
+    transition: 300ms;
+    background: #7b0505;
+}

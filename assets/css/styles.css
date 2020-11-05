@@ -1,0 +1,339 @@
+
+@media screen and (max-width: 768px) and (min-device-width: 1px) {
+    div#menudback {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(10, 10, 10, 0.64);
+        z-index: 999998;
+        top: 0;
+        right: 0;
+        display: none;
+        opacity: 0;
+        transition: 300ms;
+    }
+
+    div#menu > ul > li > a {
+        float: right;
+        width: 100%;
+        padding: 12px 17px;
+    }
+
+    div#menu {
+        position: fixed;
+        z-index: 999999;
+        top: 0;
+        right: -70%;
+        width: 70%;
+        background: white;
+        height: 100%;
+        overflow: scroll;
+        transition: 300ms;
+    }
+
+    div#menu > ul > li {
+        float: right;
+        width: 100%;
+    }
+
+    div#menu > ul > li ul {
+        float: right;
+        width: 100% !important;
+        position: relative !important;
+        top: auto !important;
+        visibility: visible;
+        opacity: 1 !important;
+        border-radius: 0px !Important;
+        display: none;
+    }
+
+    .mbp {
+        float: left;
+        width: 45px;
+        height: 44px;
+        position: absolute;
+        left: 0;
+    }
+
+    i.io {
+        float: right;
+        width: 19px;
+        height: 1px;
+        background: #bfbfbf;
+        position: absolute;
+        top: 21px;
+        right: 10px;
+    }
+
+    i.il {
+        float: right;
+        position: absolute;
+        width: 1px;
+        height: 19px;
+        background: #bfbfbf;
+        right: 19px;
+        top: 12px;
+    }
+
+    .mbopen .il {
+        transition: 100ms;
+        transform: rotate(90deg);
+    }
+
+    .openmenu {
+        display: block !important;
+    }
+
+    .megaiteminner ul {
+        padding-bottom: 0px !important;
+        padding-top: 20px !important;
+    }
+
+    #mbmnt {
+        display: block !important;
+    }
+
+    div#mbmnt {
+        float: right;
+        width: 100%;
+        padding: 15px;
+        border-bottom: 1px solid #efefef;
+        margin-bottom: 14px;
+    }
+
+    div#clbtn {
+        float: left;
+        width: 50px;
+        position: relative;
+        height: 20px;
+    }
+
+    div#clbtn i:first-child {
+        width: 1px;
+        height: 20px;
+        background: red;
+        float: left;
+        transform: rotate(45deg);
+        position: absolute;
+        left: 9px;
+    }
+
+    div#clbtn i:last-child {
+        width: 20px;
+        height: 1px;
+        background: red;
+        float: left;
+        transform: rotate(45deg);
+        position: absolute;
+        left: 0px;
+        top: 9px;
+    }
+}
+
+#mbmnt {
+    display: none;
+}
+
+
+/* NEW STYLES */
+body {
+    background: #f8f8f8 !important;
+}
+
+.select-service input[type="text"] {
+    float: right;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #cccccc;
+}
+
+.select-service select {
+    float: right;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #cccccc;
+    min-height: 43px;
+}
+
+.select-service .checkcontainer {
+    float: right;
+    width: 50%;
+    margin: 23px 0px 19px 0px;
+}
+
+.fcg.fnservice input {
+    float: right;
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+div#mobilesocials {
+    position: fixed;
+    bottom: 0;
+    z-index: 99999999999999999999999999999999;
+    width: 100%;
+    background: white;
+}
+
+.mobilesl {
+    float: right;
+    width: 100%;
+    text-align: center;
+}
+
+div#mobilewhatsapp a {
+    background: green;
+}
+
+.mobilesl a {
+    padding: 10px 0px;
+    float: right;
+    width: 100%;
+    text-align: center;
+    color: white !Important;
+    text-decoration: none !Important;
+}
+
+div#mobiletelegram {
+    background: #40a7e3;
+}
+
+div#mobileinstagram {
+    background: #c30f7c;
+}
+
+#mobilesocials {
+    display: none;
+}
+
+div#popup {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    z-index: 9999999999;
+    width: 240px;
+}
+
+div#socials {
+    float: right;
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 9px;
+    box-shadow: 0px 2px 72px rgb(0 0 0 / 15%);
+}
+
+.scfitem-container {
+    float: right;
+    width: 100%;
+    padding: 8px;
+}
+
+a.scfitem {
+    float: right;
+    width: 100%;
+    text-decoration: none !Important;
+    padding: 9px;
+    text-align: right;
+}
+
+.scfitem img {
+    float: left;
+    width: 33px;
+}
+
+a.scfitem.tlit {
+    background: #d9f2f5;
+    border-radius: 7px;
+}
+
+a.scfitem.instit {
+    background: #f8e3ec;
+    border-radius: 7px;
+    color: bd3874;
+}
+
+div#socials > span {
+    float: right;
+    width: 100%;
+    margin-top: 11px;
+    margin-bottom: 12px;
+    font-size: 12pt;
+    font-weight: 800;
+}
+
+a.scfitem span {
+    float: right;
+    font-size: 11pt;
+    margin-top: 7px;
+    font-weight: 500;
+}
+
+
+a#whatsapp {
+    position: fixed;
+    background: #2ab200;
+    bottom: 221px;
+    left: 10px;
+    width: 240px;
+    height: 60px;
+    z-index: 99999999999;
+    border-radius: 14px;
+    text-align: right;
+    text-decoration: none;
+    color: white;
+    padding-top: 18px;
+    padding-right: 20px;
+}
+
+a#whatsapp img {
+    position: absolute;
+    width: 50px;
+    left: 5px;
+    top: 5px;
+    background: rgb(255 255 255 / 98%);
+    border-radius: 10px;
+    padding: 4px;
+}
+
+a#whatsapp span {
+    float: right;
+    font-size: 13pt;
+}
+
+@media screen and (max-width: 992px) and (min-device-width: 1px) {
+    a#whatsapp {
+        display: none;
+    }
+
+    #mobilesocials {
+        display: block;
+    }
+
+    div#popup {
+        display: none;
+    }
+
+    a#whatsapp span {
+        display: none;
+    }
+
+    a#whatsapp span {
+        display: none;
+    }
+
+    a#whatsapp {
+        width: 60px !important;
+        background: #b5ffb8 !important;
+        bottom: 7px !important;
+    }
+
+    a#whatsapp img {
+        background: none !important;
+    }
+}
