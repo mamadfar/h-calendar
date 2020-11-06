@@ -142,22 +142,18 @@
     jQuery('div#menu>ul>li').mouseout(function () {
         jQuery('div#menu ul').removeClass('ulshowup');
     });
-
     jQuery('#mobilemenubtn').click(function () {
         jQuery('div#menu').css('right', '0');
         jQuery('div#menudback').css('display', 'block');
         jQuery('div#menudback').css('opacity', '1');
     });
-
     jQuery('#menudback , #clbtn').click(function () {
         jQuery('div#menu').css('right', '-70%');
         jQuery('div#menudback').css('display', 'none');
         jQuery('div#menudback').css('opacity', '0');
     });
-
     jQuery('div#menu>ul>li').click(function () {
         var selected = jQuery(this);
-
         if (!selected.find('ul').hasClass('openmenu')) {
             jQuery('#menu ul').removeClass('openmenu');
             jQuery('.mbp').removeClass('mbopen');
@@ -167,7 +163,6 @@
             selected.find('ul').removeClass('openmenu');
             selected.find('.mbp').removeClass('mbopen');
         }
-
     });
 </script>
 <form action="payrsv.php" method="post">
@@ -263,152 +258,56 @@
                                     <span class="slyear"></span>
                                 </span>
                                     <div class="dayhours" daynum="">
-
                                         <select name="times">
                                             <option value="0">انتخاب ساعت حضور</option>
-
                                             <option value="09:00">09:00</option>
-
-
                                             <option value="09:15">09:15</option>
-
-
                                             <option value="09:30">09:30</option>
-
-
                                             <option value="09:45">09:45</option>
-
-
                                             <option value="10:00">10:00</option>
-
-
                                             <option value="10:15">10:15</option>
-
-
                                             <option value="10:30">10:30</option>
-
-
                                             <option value="10:45">10:45</option>
-
-
                                             <option value="11:00">11:00</option>
-
-
                                             <option value="11:15">11:15</option>
-
-
                                             <option value="11:30">11:30</option>
-
-
                                             <option value="11:45">11:45</option>
-
-
                                             <option value="12:00">12:00</option>
-
-
                                             <option value="12:15">12:15</option>
-
-
                                             <option value="12:30">12:30</option>
-
-
                                             <option value="12:45">12:45</option>
-
-
                                             <option value="13:00">13:00</option>
-
-
                                             <option value="13:15">13:15</option>
-
-
                                             <option value="13:30">13:30</option>
-
-
                                             <option value="13:45">13:45</option>
-
-
                                             <option value="14:00">14:00</option>
-
-
                                             <option value="14:15">14:15</option>
-
-
                                             <option value="14:30">14:30</option>
-
-
                                             <option value="14:45">14:45</option>
-
-
                                             <option value="15:00">15:00</option>
-
-
                                             <option value="15:15">15:15</option>
-
-
                                             <option value="15:30">15:30</option>
-
-
                                             <option value="15:45">15:45</option>
-
-
                                             <option value="16:00">16:00</option>
-
-
                                             <option value="16:15">16:15</option>
-
-
                                             <option value="16:30">16:30</option>
-
-
                                             <option value="16:45">16:45</option>
-
-
                                             <option value="17:00">17:00</option>
-
-
                                             <option value="17:15">17:15</option>
-
-
                                             <option value="17:30">17:30</option>
-
-
                                             <option value="17:45">17:45</option>
-
-
                                             <option value="18:00">18:00</option>
-
-
                                             <option value="18:15">18:15</option>
-
-
                                             <option value="18:30">18:30</option>
-
-
                                             <option value="18:45">18:45</option>
-
-
                                             <option value="19:00">19:00</option>
-
-
                                             <option value="19:15">19:15</option>
-
-
                                             <option value="19:30">19:30</option>
-
-
                                             <option value="19:45">19:45</option>
-
-
                                             <option value="20:00">20:00</option>
-
-
                                             <option value="20:15">20:15</option>
-
-
                                             <option value="20:30">20:30</option>
-
                                         </select>
-
                                     </div>
                                     <span class="nextlevel">تایید</span>
                                     <span class="changedate">تغییر تاریخ</span>
@@ -450,7 +349,6 @@
                                 </li>
                             </ul>
                         </div>
-
                         <span id="gofirst">ویرایش اطلاعات</span>
                         <input type="submit" name="whatever" id="finishsubmit" value="تایید و پرداخت"/>
                     </div>
@@ -466,7 +364,6 @@
     });
 </script>
 <script>
-
     jQuery(document).ready(function () {
         var monthid = 1;
         jQuery('.monthitem[monthid="' + monthid + '"]').addClass('activemonth');
@@ -492,7 +389,6 @@
         });
         var bslide = 1;
         jQuery('.bslide[slidenum="' + bslide + '"]').addClass('activebslide');
-
         jQuery('div.select-service .nextlevel').click(function () {
             var wayval = jQuery('select[name="way"] option:selected').val();
             if (wayval != 0 && jQuery(".select-service-container input[type=radio]:checked").length > 0 && jQuery('input[name="lnamefname"]').val().length > 0 && jQuery('input[name="mobile"]').val().length > 0) {
@@ -501,17 +397,13 @@
                 jQuery('.bslide[slidenum="' + bslide + '"]').addClass('activebslide');
                 var fnftext = jQuery(".select-service-container input[type=radio]:checked").val();
                 jQuery('input[name="gntaahol"]').val(fnftext);
-
                 // do stuff
                 var gnflnametext = jQuery("input[name='lnamefname']").val();
                 jQuery('input[name="gnflname"]').val(gnflnametext);
-
                 var mobiletext = jQuery("input[name='mobile']").val();
                 jQuery('input[name="gnmobile"]').val(mobiletext);
-
                 var waytext = jQuery("select[name='way'] option:selected").text();
                 jQuery('input[name="gnway"]').val(waytext);
-
             } else {
                 alert('لطفا تمامی فیلد ها را تکمیل کنید')
             }
@@ -540,12 +432,10 @@
             var selected = jQuery(this);
             jQuery('.dayhours select[name="times"]').removeClass('activetimes');
             var dayc = parseInt(selected.text());
-
 // elemani ke in moshakhasat ra darad, entekhab mikonad va attr an ra ba rooze entekhabi jaigozin mikonad
             if (document.querySelector(".dayhours[daynum]")) {
                 document.querySelector("[daynum]").setAttribute("daynum", String(dayc));
             }
-
             jQuery('.activemonth .hours').find('.dayhours[daynum="' + dayc + '"] select').addClass('activetimes');
             var dayselected = parseInt(selected.text());
             jQuery('.monthitem[monthid="' + monthid + '"] .hours').css('visibility', 'visible');
@@ -627,7 +517,6 @@
     <div class="pagemargin">
         <div class="container1">
             <div class="row">
-
                 <div class="col-md-5 col-lg-5 col-sm-12 col-xs-12 nopadd">
                     <div id="ftcontact">
                         <div id="footerlogo">
