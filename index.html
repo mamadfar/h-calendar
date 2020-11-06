@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="./assets/css/templates.css" type="text/css" rel="stylesheet"/>
     <link href="./assets/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
-    <script src="./assets/js/jquery-3.5.1.min.js" type="text/javascript"></script>
     <link href="./assets/css/rgt.css" type="text/css" rel="stylesheet"/>
     <link href="./assets/css/styles.css" type="text/css" rel="stylesheet"/>
     <title>رزرو وقت ثبت نام حضوری</title>
@@ -134,37 +133,6 @@
     </div>
     <div id="menudback"></div>
 </div> <!-- /header -->
-<script>
-    jQuery('div#menu>ul>li').mouseover(function () {
-        var selected = jQuery(this);
-        selected.find('ul').addClass('ulshowup');
-    });
-    jQuery('div#menu>ul>li').mouseout(function () {
-        jQuery('div#menu ul').removeClass('ulshowup');
-    });
-    jQuery('#mobilemenubtn').click(function () {
-        jQuery('div#menu').css('right', '0');
-        jQuery('div#menudback').css('display', 'block');
-        jQuery('div#menudback').css('opacity', '1');
-    });
-    jQuery('#menudback , #clbtn').click(function () {
-        jQuery('div#menu').css('right', '-70%');
-        jQuery('div#menudback').css('display', 'none');
-        jQuery('div#menudback').css('opacity', '0');
-    });
-    jQuery('div#menu>ul>li').click(function () {
-        var selected = jQuery(this);
-        if (!selected.find('ul').hasClass('openmenu')) {
-            jQuery('#menu ul').removeClass('openmenu');
-            jQuery('.mbp').removeClass('mbopen');
-            selected.find('ul').addClass('openmenu');
-            selected.find('.mbp').addClass('mbopen');
-        } else if (selected.find('ul').hasClass('openmenu')) {
-            selected.find('ul').removeClass('openmenu');
-            selected.find('.mbp').removeClass('mbopen');
-        }
-    });
-</script>
 <form action="payrsv.php" method="post">
     <div id="booking-container">
         <div class="bookingmargin">
@@ -357,122 +325,6 @@
         </div>
     </div>
 </form>
-<script>
-    jQuery('.checkcontainer').click(function () {
-        jQuery('#timeandcalendar .checkcontainer input').parent().removeClass('activetinpt');
-        jQuery('#timeandcalendar .checkcontainer input:checked').parent().addClass('activetinpt');
-    });
-</script>
-<script>
-    jQuery(document).ready(function () {
-        var monthid = 1;
-        jQuery('.monthitem[monthid="' + monthid + '"]').addClass('activemonth');
-        jQuery('.nextmonth').click(function () {
-            var monthcount = jQuery('.monthitem').length;
-            monthid++;
-            if (monthid <= monthcount) {
-                jQuery('.monthitem').removeClass('activemonth');
-                jQuery('.monthitem[monthid="' + monthid + '"]').addClass('activemonth');
-                jQuery('.prevmonth').css('display', 'block');
-            } else {
-                alert('اتمام ماه های قابل رزرو ! لطفا با شرکت تماس بگیرید');
-                monthid--;
-            }
-        });
-        jQuery('.prevmonth').click(function () {
-            jQuery('.monthitem').removeClass('activemonth');
-            monthid--;
-            jQuery('.monthitem[monthid="' + monthid + '"]').addClass('activemonth');
-            if (monthid < 2) {
-                jQuery('.prevmonth').css('display', 'none');
-            }
-        });
-        var bslide = 1;
-        jQuery('.bslide[slidenum="' + bslide + '"]').addClass('activebslide');
-        jQuery('div.select-service .nextlevel').click(function () {
-            var wayval = jQuery('select[name="way"] option:selected').val();
-            if (wayval != 0 && jQuery(".select-service-container input[type=radio]:checked").length > 0 && jQuery('input[name="lnamefname"]').val().length > 0 && jQuery('input[name="mobile"]').val().length > 0) {
-                jQuery('.bslide').removeClass('activebslide');
-                var bslide = 2;
-                jQuery('.bslide[slidenum="' + bslide + '"]').addClass('activebslide');
-                var fnftext = jQuery(".select-service-container input[type=radio]:checked").val();
-                jQuery('input[name="gntaahol"]').val(fnftext);
-                // do stuff
-                var gnflnametext = jQuery("input[name='lnamefname']").val();
-                jQuery('input[name="gnflname"]').val(gnflnametext);
-                var mobiletext = jQuery("input[name='mobile']").val();
-                jQuery('input[name="gnmobile"]').val(mobiletext);
-                var waytext = jQuery("select[name='way'] option:selected").text();
-                jQuery('input[name="gnway"]').val(waytext);
-            } else {
-                alert('لطفا تمامی فیلد ها را تکمیل کنید')
-            }
-        });
-        jQuery('.hours .nextlevel').click(function () {
-            var tval = jQuery('.activetimes option:selected').val();
-            if (tval != 0) {
-                jQuery('.lndate').val(jQuery('.monthitem[monthid="' + monthid + '"] .sldate').text());
-                jQuery('.lnmy').val(jQuery('.monthitem[monthid="' + monthid + '"] .slmonth').text());
-                jQuery('.lnyr').val(jQuery('.monthitem[monthid="' + monthid + '"] .slyear').text());
-                var fnhour = jQuery(".hours option:selected").val();
-                jQuery('.fnhour .ftext').val(tval);
-                jQuery('.bslide').removeClass('activebslide');
-                var bslide = 3;
-                jQuery('.bslide[slidenum="' + bslide + '"]').addClass('activebslide');
-            } else {
-                alert('لطفا ساعت مراجعه را انتخاب نمایید')
-            }
-        });
-        jQuery('#gofirst').click(function () {
-            jQuery('.bslide').removeClass('activebslide');
-            var bslide = 1;
-            jQuery('.bslide[slidenum="' + bslide + '"]').addClass('activebslide');
-        });
-        jQuery('div#datecels span:not(.past,.holiday)').click(function () {
-            var selected = jQuery(this);
-            jQuery('.dayhours select[name="times"]').removeClass('activetimes');
-            var dayc = parseInt(selected.text());
-// elemani ke in moshakhasat ra darad, entekhab mikonad va attr an ra ba rooze entekhabi jaigozin mikonad
-            if (document.querySelector(".dayhours[daynum]")) {
-                document.querySelector("[daynum]").setAttribute("daynum", String(dayc));
-            }
-            jQuery('.activemonth .hours').find('.dayhours[daynum="' + dayc + '"] select').addClass('activetimes');
-            var dayselected = parseInt(selected.text());
-            jQuery('.monthitem[monthid="' + monthid + '"] .hours').css('visibility', 'visible');
-            jQuery('.monthitem[monthid="' + monthid + '"] .hours').css('opacity', '1');
-            jQuery('.monthitem[monthid="' + monthid + '"] .mycalendar').css('filter', 'blur(5px)');
-            jQuery('.sld').val(dayselected);
-            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours[daynum="' + dayselected + '"]').css('display', 'block');
-            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours[daynum="' + dayselected + '"]').css('visibility', 'visible');
-            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours[daynum="' + dayselected + '"]').css('opacity', '1');
-            jQuery('.monthitem[monthid="' + monthid + '"] .sldate').text(dayselected);
-            jQuery('.monthitem[monthid="' + monthid + '"] .slmonth').text(jQuery('.monthitem[monthid="' + monthid + '"] .clmonth').text());
-            jQuery('.monthitem[monthid="' + monthid + '"] .slyear').text(jQuery('.monthitem[monthid="' + monthid + '"] .clyear').text());
-        });
-        jQuery('.changedate').click(function () {
-            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours').css('display', 'none');
-            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours').css('visibility', 'hidden');
-            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours').css('opacity', '0');
-            jQuery('.monthitem[monthid="' + monthid + '"] .mycalendar').css('filter', 'blur(0px)');
-            jQuery('.monthitem[monthid="' + monthid + '"] .hours').css('visibility', 'hidden');
-            jQuery('.monthitem[monthid="' + monthid + '"] .hours').css('opacity', '0');
-            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours input[type="radio"]').prop('checked', false);
-        });
-        jQuery('.gotoday').click(function () {
-            var todayselected = parseInt(jQuery('.monthitem[monthid="' + monthid + '"] .today').text());
-            jQuery('.monthitem[monthid="' + monthid + '"] .sldate').text(todayselected);
-            jQuery('.monthitem[monthid="' + monthid + '"] .slmonth').text(jQuery('.monthitem[monthid="' + monthid + '"] .clmonth').text());
-            jQuery('.monthitem[monthid="' + monthid + '"] .slyear').text(jQuery('.monthitem[monthid="' + monthid + '"] .clyear').text());
-            jQuery('.monthitem[monthid="' + monthid + '"] .sld').val(todayselected);
-            jQuery('.monthitem[monthid="' + monthid + '"] .hours').css('visibility', 'visible');
-            jQuery('.monthitem[monthid="' + monthid + '"] .hours').css('opacity', '1');
-            jQuery('.monthitem[monthid="' + monthid + '"] .mycalendar').css('filter', 'blur(5px)');
-            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours[daynum="' + todayselected + '"]').css('display', 'block');
-            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours[daynum="' + todayselected + '"]').css('visibility', 'visible');
-            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours[daynum="' + todayselected + '"]').css('opacity', '1');
-        });
-    });
-</script>
 <a href="https://wa.me/+989361889654" target="_blank" id="whatsapp">
     <img src="/images/whatsapp.svg" alt="">
     <span>سوالی دارید؟</span>
@@ -627,7 +479,155 @@
             </div>
         </div>
     </div>
-    <script src="./assets/js/bootstrap.js" type="text/javascript"></script>
 </footer>
+<script src="./assets/js/jquery-3.5.1.min.js" type="text/javascript"></script>
+<script src="./assets/js/bootstrap.js" type="text/javascript"></script>
+<script>
+    jQuery('div#menu>ul>li').mouseover(function () {
+        var selected = jQuery(this);
+        selected.find('ul').addClass('ulshowup');
+    });
+    jQuery('div#menu>ul>li').mouseout(function () {
+        jQuery('div#menu ul').removeClass('ulshowup');
+    });
+    jQuery('#mobilemenubtn').click(function () {
+        jQuery('div#menu').css('right', '0');
+        jQuery('div#menudback').css('display', 'block');
+        jQuery('div#menudback').css('opacity', '1');
+    });
+    jQuery('#menudback , #clbtn').click(function () {
+        jQuery('div#menu').css('right', '-70%');
+        jQuery('div#menudback').css('display', 'none');
+        jQuery('div#menudback').css('opacity', '0');
+    });
+    jQuery('div#menu>ul>li').click(function () {
+        var selected = jQuery(this);
+        if (!selected.find('ul').hasClass('openmenu')) {
+            jQuery('#menu ul').removeClass('openmenu');
+            jQuery('.mbp').removeClass('mbopen');
+            selected.find('ul').addClass('openmenu');
+            selected.find('.mbp').addClass('mbopen');
+        } else if (selected.find('ul').hasClass('openmenu')) {
+            selected.find('ul').removeClass('openmenu');
+            selected.find('.mbp').removeClass('mbopen');
+        }
+    });
+</script>
+<script>
+    jQuery('.checkcontainer').click(function () {
+        jQuery('#timeandcalendar .checkcontainer input').parent().removeClass('activetinpt');
+        jQuery('#timeandcalendar .checkcontainer input:checked').parent().addClass('activetinpt');
+    });
+</script>
+<script>
+    jQuery(document).ready(function () {
+        var monthid = 1;
+        jQuery('.monthitem[monthid="' + monthid + '"]').addClass('activemonth');
+        jQuery('.nextmonth').click(function () {
+            var monthcount = jQuery('.monthitem').length;
+            monthid++;
+            if (monthid <= monthcount) {
+                jQuery('.monthitem').removeClass('activemonth');
+                jQuery('.monthitem[monthid="' + monthid + '"]').addClass('activemonth');
+                jQuery('.prevmonth').css('display', 'block');
+            } else {
+                alert('اتمام ماه های قابل رزرو ! لطفا با شرکت تماس بگیرید');
+                monthid--;
+            }
+        });
+        jQuery('.prevmonth').click(function () {
+            jQuery('.monthitem').removeClass('activemonth');
+            monthid--;
+            jQuery('.monthitem[monthid="' + monthid + '"]').addClass('activemonth');
+            if (monthid < 2) {
+                jQuery('.prevmonth').css('display', 'none');
+            }
+        });
+        var bslide = 1;
+        jQuery('.bslide[slidenum="' + bslide + '"]').addClass('activebslide');
+        jQuery('div.select-service .nextlevel').click(function () {
+            var wayval = jQuery('select[name="way"] option:selected').val();
+            if (wayval != 0 && jQuery(".select-service-container input[type=radio]:checked").length > 0 && jQuery('input[name="lnamefname"]').val().length > 0 && jQuery('input[name="mobile"]').val().length > 0) {
+                jQuery('.bslide').removeClass('activebslide');
+                var bslide = 2;
+                jQuery('.bslide[slidenum="' + bslide + '"]').addClass('activebslide');
+                var fnftext = jQuery(".select-service-container input[type=radio]:checked").val();
+                jQuery('input[name="gntaahol"]').val(fnftext);
+                // do stuff
+                var gnflnametext = jQuery("input[name='lnamefname']").val();
+                jQuery('input[name="gnflname"]').val(gnflnametext);
+                var mobiletext = jQuery("input[name='mobile']").val();
+                jQuery('input[name="gnmobile"]').val(mobiletext);
+                var waytext = jQuery("select[name='way'] option:selected").text();
+                jQuery('input[name="gnway"]').val(waytext);
+            } else {
+                alert('لطفا تمامی فیلد ها را تکمیل کنید')
+            }
+        });
+        jQuery('.hours .nextlevel').click(function () {
+            var tval = jQuery('.activetimes option:selected').val();
+            if (tval != 0) {
+                jQuery('.lndate').val(jQuery('.monthitem[monthid="' + monthid + '"] .sldate').text());
+                jQuery('.lnmy').val(jQuery('.monthitem[monthid="' + monthid + '"] .slmonth').text());
+                jQuery('.lnyr').val(jQuery('.monthitem[monthid="' + monthid + '"] .slyear').text());
+                var fnhour = jQuery(".hours option:selected").val();
+                jQuery('.fnhour .ftext').val(tval);
+                jQuery('.bslide').removeClass('activebslide');
+                var bslide = 3;
+                jQuery('.bslide[slidenum="' + bslide + '"]').addClass('activebslide');
+            } else {
+                alert('لطفا ساعت مراجعه را انتخاب نمایید')
+            }
+        });
+        jQuery('#gofirst').click(function () {
+            jQuery('.bslide').removeClass('activebslide');
+            var bslide = 1;
+            jQuery('.bslide[slidenum="' + bslide + '"]').addClass('activebslide');
+        });
+        jQuery('div#datecels span:not(.past,.holiday)').click(function () {
+            var selected = jQuery(this);
+            jQuery('.dayhours select[name="times"]').removeClass('activetimes');
+            var dayc = parseInt(selected.text());
+// elemani ke in moshakhasat ra darad, entekhab mikonad va attr an ra ba rooze entekhabi jaigozin mikonad
+            if (document.querySelector(".dayhours[daynum]")) {
+                document.querySelector("[daynum]").setAttribute("daynum", String(dayc));
+            }
+            jQuery('.activemonth .hours').find('.dayhours[daynum="' + dayc + '"] select').addClass('activetimes');
+            var dayselected = parseInt(selected.text());
+            jQuery('.monthitem[monthid="' + monthid + '"] .hours').css('visibility', 'visible');
+            jQuery('.monthitem[monthid="' + monthid + '"] .hours').css('opacity', '1');
+            jQuery('.monthitem[monthid="' + monthid + '"] .mycalendar').css('filter', 'blur(5px)');
+            jQuery('.sld').val(dayselected);
+            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours[daynum="' + dayselected + '"]').css('display', 'block');
+            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours[daynum="' + dayselected + '"]').css('visibility', 'visible');
+            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours[daynum="' + dayselected + '"]').css('opacity', '1');
+            jQuery('.monthitem[monthid="' + monthid + '"] .sldate').text(dayselected);
+            jQuery('.monthitem[monthid="' + monthid + '"] .slmonth').text(jQuery('.monthitem[monthid="' + monthid + '"] .clmonth').text());
+            jQuery('.monthitem[monthid="' + monthid + '"] .slyear').text(jQuery('.monthitem[monthid="' + monthid + '"] .clyear').text());
+        });
+        jQuery('.changedate').click(function () {
+            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours').css('display', 'none');
+            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours').css('visibility', 'hidden');
+            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours').css('opacity', '0');
+            jQuery('.monthitem[monthid="' + monthid + '"] .mycalendar').css('filter', 'blur(0px)');
+            jQuery('.monthitem[monthid="' + monthid + '"] .hours').css('visibility', 'hidden');
+            jQuery('.monthitem[monthid="' + monthid + '"] .hours').css('opacity', '0');
+            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours input[type="radio"]').prop('checked', false);
+        });
+        jQuery('.gotoday').click(function () {
+            var todayselected = parseInt(jQuery('.monthitem[monthid="' + monthid + '"] .today').text());
+            jQuery('.monthitem[monthid="' + monthid + '"] .sldate').text(todayselected);
+            jQuery('.monthitem[monthid="' + monthid + '"] .slmonth').text(jQuery('.monthitem[monthid="' + monthid + '"] .clmonth').text());
+            jQuery('.monthitem[monthid="' + monthid + '"] .slyear').text(jQuery('.monthitem[monthid="' + monthid + '"] .clyear').text());
+            jQuery('.monthitem[monthid="' + monthid + '"] .sld').val(todayselected);
+            jQuery('.monthitem[monthid="' + monthid + '"] .hours').css('visibility', 'visible');
+            jQuery('.monthitem[monthid="' + monthid + '"] .hours').css('opacity', '1');
+            jQuery('.monthitem[monthid="' + monthid + '"] .mycalendar').css('filter', 'blur(5px)');
+            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours[daynum="' + todayselected + '"]').css('display', 'block');
+            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours[daynum="' + todayselected + '"]').css('visibility', 'visible');
+            jQuery('.monthitem[monthid="' + monthid + '"] .dayhours[daynum="' + todayselected + '"]').css('opacity', '1');
+        });
+    });
+</script>
 </body>
 </html>
